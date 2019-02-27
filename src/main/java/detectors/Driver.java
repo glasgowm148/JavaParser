@@ -2,30 +2,37 @@ package detectors;
 
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
+import com.github.javaparser.ast.visitor.VoidVisitor;
+import detectors.UselessControlFlowDetector.forEachCheck;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 
-class Driver {
-    private static final String FILE_PATH = "/Users/markglasgow/Documents/GitHub/ooseworkshop3/src/main/java/com/workshop3/testcode/Calculator.java";
+public class Driver {
 
-    public static void main(String[] args) {
-        try {
-            CompilationUnit cu = JavaParser.parse( new FileInputStream( FILE_PATH ) );
-            BreakPoints breakpoints = new BreakPoints();
-            // cu.accept(new VoidVisitorAdapter<Breakpoints>;
-            //  UselessControlFlowDetector uselessControlFlowDetector = new UselessControlFlowDetector();
+    private static final String FILE_PATH = "/Users/markglasgow/Documents/GitHub/workshop3/src/main/java/detectors/Calculator.java";
 
-            new UselessControlFlowDetector().visit( cu, breakpoints );
-            System.out.println( breakpoints.getOutput() );
+    public static void main(String[] args) throws Exception {
 
+        CompilationUnit cu = JavaParser.parse( new FileInputStream( FILE_PATH ) );
 
-            //  Breakpoints.printNode(cu.toString()); - static
+        VoidVisitor <?> methodNameVisitor = new UselessControlFlowDetector();
+        methodNameVisitor.visit( cu, null );
+        List <String> methodNames = new ArrayList <>();
+        BreakPoints b = new BreakPoints();
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        VoidVisitor <List <String>> methodNameCollector = new UselessControlFlowDetector();
+        methodNameCollector.visit( cu, methodNames );
+        methodNames.forEach( n -> System.out.println( "Method Name Collected: " + n ) );
 
-        }
+        VoidVisitor <BreakPoints> forEachCheck = new forEachCheck();
+        forEachCheck.visit( cu, b );
 
     }
 }
+
+
+
+
+
