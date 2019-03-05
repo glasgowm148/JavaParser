@@ -37,11 +37,6 @@ class Driver {
 
             System.out.println(breakpoints.toString());
 
-
-
-
-
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
 
@@ -49,57 +44,3 @@ class Driver {
 
     }
 }
-
-
-/*
-
-            new UselessControlFlowDetector().visit( cu, breakpoints );
-            System.out.println( breakpoints.getOutput() );
-
-            new UselessControlFlowDetector().visit(MethodDeclaration n, BreakPoints b) {
-                setCurrMethod(n.getName().toString());
-                super.visit(n, b);
-            }
-            new UselessControlFlowDetector().visit(ClassOrInterfaceDeclaration n, BreakPoints b) {
-                setCurrClass(n.getName().toString());
-                super.visit(n, b);
-            }
-
-            new UselessControlFlowDetector().visit(IfStmt n, BreakPoints b) {
-                super.visit(n,b);
-                if(controlFlowChecker(n))
-                    b.addNode(n);
-
-            }
-
-            new UselessControlFlowDetector().visit(ForStmt n, BreakPoints b) {
-                super.visit(n, b);
-                if(controlFlowChecker(n))
-                    b.addNode(n);
-
-            }
-
-            new UselessControlFlowDetector().visit(WhileStmt n, BreakPoints b) {
-                super.visit(n, b);
-                if(controlFlowChecker(n))
-                    b.addNode(n);
-
-            }
-
-            new UselessControlFlowDetector().visit(SwitchStmt n, BreakPoints b) {
-                super.visit(n, b);
-                if(controlFlowChecker(n))
-                    b.addNode(n);
-
-            }
-
-            @Override
-            new UselessControlFlowDetector().visit(DoStmt n, BreakPoints b) {
-                super.visit(n, b);
-                if(controlFlowChecker(n))
-                    b.addNode( currClass, currMethod, n.getBegin().get().line, n.getEnd().get().line );
-
-            }
-
- */
-
