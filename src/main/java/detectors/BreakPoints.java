@@ -1,31 +1,24 @@
 package detectors;
 
-import com.github.javaparser.ast.stmt.Statement;
+class BreakPoints {
 
-import java.util.ArrayList;
+    String className;
+    String methodName;
+    int start;
+    int end;
 
-/*
-BreakPoints is a class which has an ArrayList of strings
-when you dp breakpoint.add(node) it will parse the node into the required string format and add it to to the list of "breakpoint" strings
-then when breakpoint.getOutput() is executed, it prints each string in the arraylist
- */
+    void addNode(String currClass, String currMethod, int start, int end) {
+        this.className = currClass;
+        this.methodName = currMethod;
+        this.start = start;
+        this.end = end;
 
-public class BreakPoints {
-
-    StringBuilder sb = new StringBuilder();
-    private ArrayList <Statement> breakpoints;
-
-
-    public BreakPoints() {
-        this.breakpoints = new ArrayList <Statement>();
+        this.toString();
     }
 
-    void addNode(Statement n) {
-        breakpoints.add( n );
-
-        // sb.append( "className = 'Calculator'" + " methodName = " + "'" + "methodname" + "'" + " startline = " + "'" + start + "'" + " endline = " + "'" + end + "'" );
-
-        System.out.println( sb.toString() );
+    @Override
+    public String toString() {
+        return "Breakpoints = \n" + "Class : " + this.className + "\nMethod : " + this.methodName + " \nFrom line : " + start + " To : "  + end ;
     }
 
 }

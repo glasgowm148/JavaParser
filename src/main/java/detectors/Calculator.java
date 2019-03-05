@@ -6,12 +6,12 @@ import java.util.Scanner;
  * @author inah
  * This class contains utility functions for different calculator operations
  */
-public class Calculator {
+class Calculator {
 
     public Calculator() {
     }
 
-    public static int multiply2(int num1, int num2) {
+    private static int multiply2(int num1, int num2) {
         if (num1 == 0 || num2 == 0) {
             return 0;
         } else if (num2 > 0) {
@@ -51,7 +51,7 @@ public class Calculator {
                 result = first / second;
                 break;
             default:
-                System.out.printf( "Error! operator is not correct" );
+                System.out.print( "Error! operator is not correct" );
                 return;
         }
 
@@ -107,7 +107,7 @@ public class Calculator {
         method1( args, x );
     }
 
-    public void method1(String args[], int x) {
+    private void method1(String args[], int x) {
 
     }
 }
