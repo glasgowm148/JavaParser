@@ -1,5 +1,6 @@
 package detectors;
 
+import com.github.javaparser.ast.Node;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.stmt.*;
@@ -13,6 +14,8 @@ class UselessControlFlowDetector extends VoidVisitorAdapter<BreakPoints> {
     public void visit(MethodDeclaration n, BreakPoints b) {
         b.addClass( n.getNameAsString() );
         super.visit( n, b );
+        List <Node> children = n.getChildNodes();
+        new RecursionDetector(children, n , b);
     }
 
     @Override
@@ -61,5 +64,7 @@ class UselessControlFlowDetector extends VoidVisitorAdapter<BreakPoints> {
         }
         return false;
     }
+
+
 }
 
