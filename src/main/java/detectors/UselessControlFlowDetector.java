@@ -12,7 +12,7 @@ class UselessControlFlowDetector extends VoidVisitorAdapter<BreakPoints> {
     @Override
     public void visit(MethodDeclaration n, BreakPoints b) {
         b.addClass( n.getNameAsString() );
-
+        // method.getBody());
         super.visit( n, b );
 
     }
@@ -66,6 +66,7 @@ class UselessControlFlowDetector extends VoidVisitorAdapter<BreakPoints> {
     private boolean codeAnalysis(Statement arg) {
         List <BlockStmt> node = null;
         node = arg.findAll( BlockStmt.class );
+
 
         for (BlockStmt n : node) {
             if (n.getChildNodes().isEmpty())

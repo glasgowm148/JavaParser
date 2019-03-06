@@ -1,5 +1,7 @@
 package detectors;
 
+import com.github.javaparser.ast.Node;
+
 class BreakPoints {
 
     private String className;
@@ -24,6 +26,10 @@ class BreakPoints {
     public String toString() {
         return String.format( "Class Name=%s, Method Name =%s, Starting Line =%s, Ending Line=%s",
                 this.className, this.methodName, this.start, this.end );
+    }
+
+    public void addDNode(Node node) {
+        System.out.println( node.getRange() );
     }
 }
 

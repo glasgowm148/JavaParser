@@ -2,10 +2,11 @@ package detectors;
 
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
-import com.github.javaparser.ast.stmt.BlockStmt;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+
+import static detectors.RecursionDetector.recursiveTest;
 
 class Driver {
     private static final String FILE_PATH = "/Users/markglasgow/iCloud Drive (Archive)/Documents/GitHub/workshop3/src/main/java/detectors/Calculator.java";
@@ -51,10 +52,11 @@ class Driver {
 
             System.out.println(breakpoints.toString());
 
-            RecursionDetector recursive = new RecursionDetector( cu.findFirst( BlockStmt.class ).get() );
-            System.out.println( recursive );
+            // RecursionDetector recursive = new RecursionDetector( cu.findFirst( BlockStmt.class ).get() );
+            // System.out.println( recursive );
 
 
+            recursiveTest( cu, breakpoints );
 
 
 

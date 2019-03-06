@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="b4cf59db-3e25-4afc-aa88-c890df3614ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/detectors/BreakPoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/detectors/BreakPoints.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/detectors/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/detectors/Driver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/detectors/RecursionDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/detectors/RecursionDetector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/detectors/UselessControlFlowDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/detectors/UselessControlFlowDetector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/detectors/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/detectors/Driver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/detectors/RecursionDetector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/detectors/UselessControlFlowDetector.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,7 +62,8 @@
         <counts>
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.56" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -68,8 +73,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1928" />
-          <entry key="PLAIN_TEXT" value="41" />
+          <entry key="JAVA" value="2766" />
+          <entry key="PLAIN_TEXT" value="54" />
         </counts>
       </usages-collector>
     </session>
@@ -79,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/com/github/javaparser/javaparser-core/3.12.0/javaparser-core-3.12.0-sources.jar!/com/github/javaparser/ast/visitor/VoidVisitorAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-757">
-              <caret line="287" column="16" selection-start-line="287" selection-start-column="16" selection-end-line="287" selection-end-column="16" />
+            <state relative-caret-position="261">
+              <caret line="384" column="5" selection-start-line="380" selection-start-column="4" selection-end-line="384" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -88,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/detectors/UselessControlFlowDetector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="522">
+              <caret line="73" column="9" lean-forward="true" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/detectors/Driver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+            <state relative-caret-position="418">
+              <caret line="66" column="9" lean-forward="true" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,12 +117,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/detectors/RecursionDetector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="270">
+              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#670#671#0" expanded="true" />
-                <element signature="e#693#694#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -126,8 +129,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/detectors/BreakPoints.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="405">
+              <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+              <folding>
+                <element signature="e#709#710#0" expanded="true" />
+                <element signature="e#725#726#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,7 +142,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/detectors/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-372">
+            <state relative-caret-position="-512">
               <caret line="32" column="12" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="12" />
             </state>
           </provider>
@@ -176,9 +183,10 @@
       <find>visit</find>
       <find>clear</find>
       <find>print</find>
-      <find>char</find>
-      <find>while</find>
       <find>nextdo</find>
+      <find>nameexp</find>
+      <find>while</find>
+      <find>char</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -227,6 +235,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -272,13 +281,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551835881470" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551838119379" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -383,7 +391,8 @@
       <workItem from="1551703860177" duration="421000" />
       <workItem from="1551714690941" duration="74000" />
       <workItem from="1551805078206" duration="4062000" />
-      <workItem from="1551814549154" duration="9680000" />
+      <workItem from="1551814549154" duration="11471000" />
+      <workItem from="1551839145949" duration="3210000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1551276089267</created>
@@ -406,16 +415,24 @@
       <option name="project" value="LOCAL" />
       <updated>1551806735200</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="revert this?">
+      <created>1551836160231</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1551836160232</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70777000" />
+    <option name="totallyTimeSpent" value="75778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32661784" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33028084" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -424,8 +441,8 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2622449" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4020408" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2622449" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4020408" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -491,7 +508,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="big changes ahead" />
     <MESSAGE value="task1 finished &amp; working - isPresent?" />
-    <option name="LAST_COMMIT_MESSAGE" value="task1 finished &amp; working - isPresent?" />
+    <MESSAGE value="revert this?" />
+    <option name="LAST_COMMIT_MESSAGE" value="revert this?" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -501,7 +519,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/detectors/Driver.java</url>
-          <line>55</line>
+          <line>56</line>
           <properties />
           <option name="timeStamp" value="178" />
         </line-breakpoint>
@@ -509,35 +527,65 @@
           <url>file://$PROJECT_DIR$/src/main/java/detectors/RecursionDetector.java</url>
           <line>16</line>
           <properties />
-          <option name="timeStamp" value="185" />
+          <option name="timeStamp" value="196" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/detectors/RecursionDetector.java</url>
-          <line>19</line>
+          <line>20</line>
           <properties />
-          <option name="timeStamp" value="187" />
+          <option name="timeStamp" value="197" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/detectors/RecursionDetector.java</url>
-          <line>18</line>
+          <url>file://$PROJECT_DIR$/src/main/java/detectors/Driver.java</url>
+          <line>58</line>
           <properties />
-          <option name="timeStamp" value="188" />
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/detectors/UselessControlFlowDetector.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/detectors/UselessControlFlowDetector.java</url>
+          <line>70</line>
+          <properties />
+          <option name="timeStamp" value="202" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/detectors/UselessControlFlowDetector.java</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="203" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/detectors/UselessControlFlowDetector.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="204" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/detectors/UselessControlFlowDetector.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="205" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/detectors/RecursionDetector.java</url>
-          <line>15</line>
-          <properties class="detectors.RecursionDetector" method="&lt;init&gt;">
+          <line>12</line>
+          <properties class="detectors.RecursionDetector" method="recursiveTest">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="182" />
+          <option name="timeStamp" value="195" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/detectors/RecursionDetector.java</url>
-          <line>23</line>
-          <properties class="detectors.RecursionDetector" method="RecursionDetector">
+          <url>file://$PROJECT_DIR$/src/main/java/detectors/UselessControlFlowDetector.java</url>
+          <line>65</line>
+          <properties class="detectors.UselessControlFlowDetector" method="codeAnalysis">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="189" />
+          <option name="timeStamp" value="200" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -600,55 +648,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/detectors/Calculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-372">
-          <caret line="32" column="12" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/github/javaparser/javaparser-core/3.12.0/javaparser-core-3.12.0-sources.jar!/com/github/javaparser/ast/visitor/VoidVisitorAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-757">
-          <caret line="287" column="16" selection-start-line="287" selection-start-column="16" selection-end-line="287" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/detectors/UselessControlFlowDetector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="261">
+          <caret line="384" column="5" selection-start-line="380" selection-start-column="4" selection-end-line="384" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/detectors/Driver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+        <state relative-caret-position="418">
+          <caret line="66" column="9" lean-forward="true" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/detectors/Calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-512">
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/detectors/BreakPoints.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="405">
+          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+          <folding>
+            <element signature="e#709#710#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/detectors/UselessControlFlowDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="73" column="9" lean-forward="true" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/detectors/RecursionDetector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="270">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#693#694#0" expanded="true" />
           </folding>
         </state>
       </provider>
