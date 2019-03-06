@@ -1,28 +1,29 @@
 package detectors;
 
 import com.github.javaparser.ast.Node;
-import com.github.javaparser.ast.body.MethodDeclaration;
+import com.github.javaparser.ast.stmt.BlockStmt;
+import com.github.javaparser.ast.stmt.Statement;
+import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 
 import java.util.List;
 
-class RecursionDetector {
+class RecursionDetector extends VoidVisitorAdapter {
 
-    private List<Node> leaves;
+    private List <Node> leaves = null;
+    private List <Node> children;
+    private List <Statement> nodes;
 
-    RecursionDetector(List <Node> children, MethodDeclaration n, BreakPoints b) {
-        recursionCheck(children, n, leaves);
-
+    public RecursionDetector(BlockStmt node) {
+        for (BlockStmt childNode : node.findAll( BlockStmt.class ))
+            if (!childNode.getChildNodes().isEmpty())
+                RecursionDetector( childNode );
     }
 
-    private void recursionCheck(List <Node> children, Node node, List <Node> leaves) {
-        if (children.isEmpty()) {
-            this.leaves.add( node );
-            System.out.println(this.leaves);
-        } else {
-            children.forEach( n1 -> recursionCheck( children, n1, this.leaves ) );
-        }
 
+    void RecursionDetector(Node node) {
+        leaves.add( node );
     }
 }
+
 
 // ArrayList <Node> children, MethodDeclaration n, ArrayList <Node> leave
