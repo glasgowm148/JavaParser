@@ -1,17 +1,18 @@
-package detectors;
+package testcode;
 
 import java.util.Scanner;
 
 /**
+ *
  * @author inah
  * This class contains utility functions for different calculator operations
  */
-class Calculator {
+public class Calculator {
 
     public Calculator() {
     }
 
-    private static int multiply2(int num1, int num2) {
+    public static int multiply2(int num1, int num2) {
         if (num1 == 0 || num2 == 0) {
             return 0;
         } else if (num2 > 0) {
@@ -51,7 +52,7 @@ class Calculator {
                 result = first / second;
                 break;
             default:
-                System.out.print( "Error! operator is not correct" );
+                System.out.printf( "Error! operator is not correct" );
                 return;
         }
 
@@ -107,7 +108,7 @@ class Calculator {
         method1( args, x );
     }
 
-    private void method1(String args[], int x) {
+    public void method1(String args[], int x) {
 
     }
 }

@@ -9,17 +9,18 @@ import java.util.List;
 
 class UselessControlFlowDetector extends VoidVisitorAdapter<BreakPoints> {
 
+    // Get the method name
     @Override
     public void visit(MethodDeclaration n, BreakPoints b) {
-        b.addClass( n.getNameAsString() );
-        // method.getBody());
+        b.addMethod( n.getNameAsString() );
         super.visit( n, b );
 
     }
 
+    // Get the class name
     @Override
     public void visit(ClassOrInterfaceDeclaration n, BreakPoints b) {
-        b.addMethod( n.getNameAsString() );
+        b.addClass( n.getNameAsString() );
         super.visit( n, b );
     }
 
@@ -62,16 +63,12 @@ class UselessControlFlowDetector extends VoidVisitorAdapter<BreakPoints> {
     }
 
 
-    // Required for begin/end line to work properly.
+    // Do Analysis
     private boolean codeAnalysis(Statement arg) {
         List <BlockStmt> node = null;
         node = arg.findAll( BlockStmt.class );
 
-
-        for (BlockStmt n : node) {
-            if (n.getChildNodes().isEmpty())
-                return true;
-        }
+        for (BlockStmt n : node) if (n.isEmpty()) return true;
 
         return false;
     }
