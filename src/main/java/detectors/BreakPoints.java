@@ -1,6 +1,7 @@
 package detectors;
 
 import com.github.javaparser.ast.Node;
+import com.github.javaparser.ast.expr.MethodCallExpr;
 
 class BreakPoints {
 
@@ -30,6 +31,10 @@ class BreakPoints {
 
     public void addDNode(Node node) {
         System.out.println( node.getRange() );
+    }
+
+    public void addRecursive(String methodName, MethodCallExpr m) {
+        System.out.println( methodName );
     }
 }
 

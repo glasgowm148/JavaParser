@@ -6,8 +6,6 @@ import com.github.javaparser.ast.CompilationUnit;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-import static detectors.RecursionDetector.recursiveTest;
-
 class Driver {
     private static final String FILE_PATH = "/Users/markglasgow/iCloud Drive (Archive)/Documents/GitHub/workshop3/src/main/java/detectors/Calculator.java";
 
@@ -55,8 +53,8 @@ class Driver {
             // RecursionDetector recursive = new RecursionDetector( cu.findFirst( BlockStmt.class ).get() );
             // System.out.println( recursive );
 
-
-            recursiveTest( cu, breakpoints );
+            RecursionDetector MethodCallExpr = new RecursionDetector();
+            MethodCallExpr.visit( cu, breakpoints );
 
 
 
