@@ -23,9 +23,13 @@ class Driver {
             System.out.println(breakpoints.toString());
 
             // RecursiveDetector call
-            cu.accept( new RecursionDetector(), breakpoints );
             System.out.println( "Recursive Methods ::" );
-            System.out.println( breakpoints.toString() );
+
+            cu.accept( new RecursionDetector(), breakpoints );
+
+
+            // Had issues adding the instance to a list so I've placed the print statement inside RecursionDetector instead
+            // System.out.println( breakpoints.toString() );
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

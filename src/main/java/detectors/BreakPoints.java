@@ -6,11 +6,23 @@ import java.util.ArrayList;
 
 class BreakPoints {
 
+    private static ArrayList <BreakPoints> breakpoints = new ArrayList <>();
     private String className;
     private String methodName;
     private int start;
     private int end;
-    ArrayList breakp = new ArrayList <BreakPoints>();
+    private long skipVal;
+
+    public BreakPoints(String className, String methodName, int start, int end) {
+        this.className = className;
+        this.methodName = methodName;
+        this.start = start;
+        this.end = end;
+    }
+
+    public BreakPoints() {
+
+    }
 
 
     void addNode(String currClass, String currMethod, int start, int end) {
@@ -18,35 +30,29 @@ class BreakPoints {
         this.methodName = currMethod;
         this.start = start;
         this.end = end;
-        BreakPoints bp = new BreakPoints();
-        bp.setMethod( methodName );
-        breakp.add( bp );
+        BreakPoints p1 = new BreakPoints( className, methodName, start, end );
+        breakpoints.add( p1 );
     }
 
     void addRecursive(String methodName, MethodCallExpr m) {
-
-        System.out.println( "Recursive : " + methodName );
-
+        this.className = className;
         this.methodName = methodName;
         this.start = m.getRange().get().begin.line;
+        ;
         this.end = m.getRange().get().end.line;
-        BreakPoints bp = new BreakPoints();
-        bp.setMethod( methodName );
-        breakp.add( bp );
-    }
+        ;
+        System.out.println( String.format( "Class Name=%s, Method Name =%s, Starting Line =%s, Ending Line=%s",
+                className, methodName, start, end ) );
 
-    private void setMethod(String methodName) {
-        this.methodName = methodName;
     }
 
     void clear() {
-        breakp = new ArrayList();
-
+        breakpoints = new ArrayList <>();
     }
 
     @Override
     public String toString() {
-        for (Object b : breakp) {
+        for (BreakPoints b : breakpoints) {
             return String.format( "Class Name=%s, Method Name =%s, Starting Line =%s, Ending Line=%s",
                     className, methodName, start, end );
         }

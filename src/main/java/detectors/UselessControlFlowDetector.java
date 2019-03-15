@@ -13,15 +13,14 @@ class UselessControlFlowDetector extends VoidVisitorAdapter<BreakPoints> {
     private String curClass;
 
 
-    // Get the method name
+    // Get the class name and store it using a helper method .
     @Override
     public void visit(MethodDeclaration n, BreakPoints b) {
         setCurrMethod( n.getName().toString() );
         super.visit( n, b );
-
     }
 
-    // Get the class name
+    // Get the class name and store it using a helper method .
     @Override
     public void visit(ClassOrInterfaceDeclaration n, BreakPoints b) {
         setCurrClass( n.getNameAsString() );
@@ -77,11 +76,13 @@ class UselessControlFlowDetector extends VoidVisitorAdapter<BreakPoints> {
     private boolean codeAnalysis(Statement arg) {
         List <BlockStmt> node = null;
         node = arg.findAll( BlockStmt.class );
-
         for (BlockStmt n : node) if (n.isEmpty()) return true;
-
         return false;
     }
+
+    /* Helper methods to get the current class and method since they are not accessible
+    from the various controlflow statements.
+    */
 
     public void setCurrMethod(String currMethod) {
         this.currMethod = currMethod;
