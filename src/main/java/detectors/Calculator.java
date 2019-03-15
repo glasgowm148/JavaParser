@@ -1,4 +1,4 @@
-package testcode;
+package detectors;
 
 import java.util.Scanner;
 

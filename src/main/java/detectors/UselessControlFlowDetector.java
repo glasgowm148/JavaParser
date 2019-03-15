@@ -9,10 +9,14 @@ import java.util.List;
 
 class UselessControlFlowDetector extends VoidVisitorAdapter<BreakPoints> {
 
+    private String currMethod;
+    private String curClass;
+
+
     // Get the method name
     @Override
     public void visit(MethodDeclaration n, BreakPoints b) {
-        b.addMethod( n.getNameAsString() );
+        setCurrMethod( n.getName().toString() );
         super.visit( n, b );
 
     }
@@ -20,46 +24,52 @@ class UselessControlFlowDetector extends VoidVisitorAdapter<BreakPoints> {
     // Get the class name
     @Override
     public void visit(ClassOrInterfaceDeclaration n, BreakPoints b) {
-        b.addClass( n.getNameAsString() );
+        setCurrClass( n.getNameAsString() );
         super.visit( n, b );
     }
 
     @Override
     public void visit(IfStmt n, BreakPoints b) {
         super.visit( n, b );
-        if (codeAnalysis( n )) b.addNode( n.getRange().get().begin.line, n.getRange().get().end.line );
+        if (codeAnalysis( n ))
+            b.addNode( curClass, currMethod, n.getRange().get().begin.line, n.getRange().get().end.line );
     }
 
     @Override
     public void visit(ForStmt n, BreakPoints b) {
         super.visit( n, b );
-        if (codeAnalysis( n )) b.addNode( n.getRange().get().begin.line, n.getRange().get().end.line );
+        if (codeAnalysis( n ))
+            b.addNode( curClass, currMethod, n.getRange().get().begin.line, n.getRange().get().end.line );
     }
 
     @Override
     public void visit(WhileStmt n, BreakPoints b) {
         super.visit( n, b );
-        if (codeAnalysis( n )) b.addNode( n.getRange().orElse( null ).begin.line, n.getRange().get().end.line );
+        if (codeAnalysis( n ))
+            b.addNode( curClass, currMethod, n.getRange().get().begin.line, n.getRange().get().end.line );
     }
 
     @Override
     public void visit(SwitchStmt n, BreakPoints b) {
         super.visit( n, b );
-        if (codeAnalysis( n )) b.addNode( n.getRange().get().begin.line, n.getRange().get().end.line );
+        if (codeAnalysis( n ))
+            b.addNode( curClass, currMethod, n.getRange().get().begin.line, n.getRange().get().end.line );
     }
 
 
     @Override
     public void visit(DoStmt n, BreakPoints b) {
         super.visit( n, b );
-        if (codeAnalysis( n )) b.addNode( n.getRange().get().begin.line, n.getRange().get().end.line );
+        if (codeAnalysis( n ))
+            b.addNode( curClass, currMethod, n.getRange().get().begin.line, n.getRange().get().end.line );
     }
 
 
     @Override
     public void visit(TryStmt n, BreakPoints b) {
         super.visit( n, b );
-        if (codeAnalysis( n )) b.addNode( n.getRange().get().begin.line, n.getRange().get().end.line );
+        if (codeAnalysis( n ))
+            b.addNode( curClass, currMethod, n.getRange().get().begin.line, n.getRange().get().end.line );
     }
 
 
@@ -71,6 +81,14 @@ class UselessControlFlowDetector extends VoidVisitorAdapter<BreakPoints> {
         for (BlockStmt n : node) if (n.isEmpty()) return true;
 
         return false;
+    }
+
+    public void setCurrMethod(String currMethod) {
+        this.currMethod = currMethod;
+    }
+
+    public void setCurrClass(String currClass) {
+        this.curClass = currClass;
     }
 
 

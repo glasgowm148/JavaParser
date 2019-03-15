@@ -7,7 +7,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 class Driver {
-    private static final String FILE_PATH = "/Users/markglasgow/iCloud Drive (Archive)/Documents/GitHub/workshop3/src/main/java/detectors/Calculator.java";
+
+    private static final String FILE_PATH = "/Users/markglasgow/Desktop/Calculator.java";
 
     public static void main(String[] args) {
         try {
@@ -23,8 +24,8 @@ class Driver {
 
             // RecursiveDetector call
             cu.accept( new RecursionDetector(), breakpoints );
-
-            //   System.out.println(breakpoints.toString());
+            System.out.println( "Recursive Methods ::" );
+            System.out.println( breakpoints.toString() );
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
